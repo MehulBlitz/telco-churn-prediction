@@ -28,6 +28,7 @@ Usage:
 from __future__ import annotations
 
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 
 import joblib
@@ -75,6 +76,11 @@ RANDOM_STATE = 42
 CV = StratifiedKFold(n_splits=5, shuffle=True, random_state=RANDOM_STATE)
 
 sns.set_theme(style="whitegrid", palette="deep")
+
+
+def utc_now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
 
 NUMERIC = ["tenure", "MonthlyCharges", "TotalCharges"]
 BINARY = ["SeniorCitizen"]  # already 0/1
@@ -350,6 +356,7 @@ def main() -> None:
     imp.to_csv(ART / "feature_importance.csv", index=False)
 
     metrics = {
+        "generated_at": utc_now_iso(),
         "winner_model": winner,
         "dataset_rows": int(len(df)),
         "churn_rate": round(float(y.mean()), 4),
