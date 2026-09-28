@@ -1,4 +1,5 @@
 {
+  "generated_at": "2026-09-28T15:03:53.785798+00:00",
   "winner_model": "Random Forest",
   "dataset_rows": 7043,
   "churn_rate": 0.2654,
@@ -140,6 +141,5 @@
       "feature": "Contract_One year",
       "importance": 0.02196015351660865
     }
-  ],
-  "generated_at": "2026-09-28T14:56:34.082965+00:00"
+  ]
 }
