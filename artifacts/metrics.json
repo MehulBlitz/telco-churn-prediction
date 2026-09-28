@@ -1,0 +1,144 @@
+{
+  "winner_model": "Random Forest",
+  "dataset_rows": 7043,
+  "churn_rate": 0.2654,
+  "test_size": 1409,
+  "baseline_no_class_weights": {
+    "threshold": 0.5,
+    "accuracy": 0.8055,
+    "precision_churn": 0.6572,
+    "recall_churn": 0.5588,
+    "f1_churn": 0.604,
+    "roc_auc": 0.842,
+    "pr_auc": 0.6335
+  },
+  "models": {
+    "Logistic Regression": {
+      "best_params": {
+        "C": 3.0
+      },
+      "cv_roc_auc": 0.8461,
+      "test_default_0.5": {
+        "threshold": 0.5,
+        "accuracy": 0.7395,
+        "precision_churn": 0.506,
+        "recall_churn": 0.7834,
+        "f1_churn": 0.6149,
+        "roc_auc": 0.8413,
+        "pr_auc": 0.6294
+      },
+      "test_tuned_threshold": {
+        "threshold": 0.592,
+        "accuracy": 0.763,
+        "precision_churn": 0.5405,
+        "recall_churn": 0.7139,
+        "f1_churn": 0.6152,
+        "roc_auc": 0.8413,
+        "pr_auc": 0.6294
+      }
+    },
+    "Random Forest": {
+      "best_params": {
+        "max_depth": null,
+        "max_features": "sqrt",
+        "min_samples_leaf": 20,
+        "n_estimators": 600
+      },
+      "cv_roc_auc": 0.8484,
+      "test_default_0.5": {
+        "threshold": 0.5,
+        "accuracy": 0.7544,
+        "precision_churn": 0.5249,
+        "recall_churn": 0.7888,
+        "f1_churn": 0.6303,
+        "roc_auc": 0.8442,
+        "pr_auc": 0.6512
+      },
+      "test_tuned_threshold": {
+        "threshold": 0.5417,
+        "accuracy": 0.7729,
+        "precision_churn": 0.5531,
+        "recall_churn": 0.7513,
+        "f1_churn": 0.6372,
+        "roc_auc": 0.8442,
+        "pr_auc": 0.6512
+      }
+    },
+    "Gradient Boosting": {
+      "best_params": {
+        "learning_rate": 0.03,
+        "max_depth": 3,
+        "n_estimators": 200,
+        "subsample": 0.8
+      },
+      "cv_roc_auc": 0.8507,
+      "test_default_0.5": {
+        "threshold": 0.5,
+        "accuracy": 0.8062,
+        "precision_churn": 0.676,
+        "recall_churn": 0.5187,
+        "f1_churn": 0.587,
+        "roc_auc": 0.8461,
+        "pr_auc": 0.6615
+      },
+      "test_tuned_threshold": {
+        "threshold": 0.3219,
+        "accuracy": 0.775,
+        "precision_churn": 0.5573,
+        "recall_churn": 0.7406,
+        "f1_churn": 0.6361,
+        "roc_auc": 0.8461,
+        "pr_auc": 0.6615
+      }
+    }
+  },
+  "headline": {
+    "recall_baseline_no_class_weights": 0.5588,
+    "recall_default_0.5": 0.7888,
+    "recall_tuned_threshold": 0.7513,
+    "f1_tuned_threshold": 0.6372,
+    "roc_auc": 0.8442
+  },
+  "top_features": [
+    {
+      "feature": "Contract_Month-to-month",
+      "importance": 0.16134413546383675
+    },
+    {
+      "feature": "tenure",
+      "importance": 0.12113944887080691
+    },
+    {
+      "feature": "TotalCharges",
+      "importance": 0.08042388331701265
+    },
+    {
+      "feature": "OnlineSecurity_No",
+      "importance": 0.07774869355792945
+    },
+    {
+      "feature": "Contract_Two year",
+      "importance": 0.0775857088635552
+    },
+    {
+      "feature": "TechSupport_No",
+      "importance": 0.0636619626656455
+    },
+    {
+      "feature": "InternetService_Fiber optic",
+      "importance": 0.06227306640613808
+    },
+    {
+      "feature": "MonthlyCharges",
+      "importance": 0.04751089950109732
+    },
+    {
+      "feature": "PaymentMethod_Electronic check",
+      "importance": 0.04035466608505981
+    },
+    {
+      "feature": "Contract_One year",
+      "importance": 0.02196015351660865
+    }
+  ]
+}
